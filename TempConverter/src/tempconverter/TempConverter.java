@@ -35,7 +35,7 @@ public class TempConverter {
                 if (s.equals("C")) {
                     System.out.printf("%6.2f F%n", ((9 * t) / 5) + 32);
                 } else {
-                    System.out.printf("%6.2f F%n", ((t - 32) * 5) / 9);
+                    System.out.printf("%6.2f C%n", ((t - 32) * 5) / 9);
                 }
             }
         } catch (FileNotFoundException ex) {
