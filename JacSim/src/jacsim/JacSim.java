@@ -40,15 +40,11 @@ public class JacSim {
                 int charIdx = 0;
                 while (charIdx < line.length() - 1){
                     sub.add(line.substring(charIdx, charIdx+2));
+                    if(charIdx < line.length() - 2)
+                        sub.add(line.substring(charIdx+1, charIdx+3));
                     charIdx = charIdx + 2;
                 }
-                
-                charIdx = 1;
-                while (charIdx < line.length() - 1){
-                    sub.add(line.substring(charIdx, charIdx+2));
-                    charIdx = charIdx + 2;
-                }
-                
+                              
                 Lines.add(sub);
             }
             
@@ -65,8 +61,7 @@ public class JacSim {
             System.out.println("\nJaccard Similarity Matrix:\n");
             
             double maxScore = -1;
-            int MaxA = -1;
-            int MaxB = -2;
+            int MaxA = -1, MaxB = -1;
             for (SortedSet<String> sub: Lines){
                 for (SortedSet<String> sub2: Lines){
                     SortedSet<String> tmp = new TreeSet();
