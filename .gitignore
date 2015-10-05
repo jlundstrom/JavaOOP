@@ -21,3 +21,5 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 .nb-gradle/
+/JacSim/nbproject/private/
+/AsteroidField/nbproject/private/
