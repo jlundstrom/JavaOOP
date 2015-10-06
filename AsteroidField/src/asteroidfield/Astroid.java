@@ -25,7 +25,7 @@ public class Astroid extends blobzx.PolyBlob {
             // Get angle for point
             double ang = (arc * i) + (ran.nextDouble() * arc );
             // Get radious for angle
-            double arcRad = (ran.nextDouble() * rad + 5);
+            double arcRad = (ran.nextInt(rad + 1) + 5);
             ang = Math.toRadians(ang);
             xArr[i] = (int)Math.round(Math.cos(ang) * arcRad);
             yArr[i] = (int)Math.round(Math.sin(ang) * arcRad);
